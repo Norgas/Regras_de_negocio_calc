@@ -1,0 +1,6 @@
+x= int(input("Insira um número"))
+y= int(input("Insira outro número"))
+
+z= x ** y
+
+print(z)
