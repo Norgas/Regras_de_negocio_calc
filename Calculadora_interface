@@ -1,0 +1,23 @@
+import tkinter as tk
+
+base = tk.Tk()
+
+titulo = tk.Label(text = "Calculadora")
+titulo.grid(column=2, row=0)
+
+soma_botao = tk.Button(text = "+", width=2)
+soma_botao.grid(column=3, row=1)
+
+subtracao_botao = tk.Button(text = "-", width=2)
+subtracao_botao.grid(column=4, row=1)
+
+multiplicacao_botao = tk.Button(text = "*", width=2)
+multiplicacao_botao.grid(column=3, row=2)
+
+divisao_botao = tk.Button(text = "/", width=2)
+divisao_botao.grid(column=4, row=2)
+
+exponencial_botao = tk.Button(text= "x^y", width = 2)
+exponencial_botao.grid(column=3,row=3)
+
+base.mainloop()
