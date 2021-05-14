@@ -1,1 +1,6 @@
-teste
+x= input("Insira um número)
+y= input("Insira outro número)
+
+z= y+x
+
+print(z)
