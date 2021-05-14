@@ -1,4 +1,4 @@
-import math 
+import math library
 
 z = float ( input ("Informe um numero para calcular a sua raiz: "))
 raiz= math.sqrt(numero)
