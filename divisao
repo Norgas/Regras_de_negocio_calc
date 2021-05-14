@@ -1,0 +1,8 @@
+x = int(input())
+text_divisao= "{}/".format(x)
+
+y = int(input(text_divisao))
+
+z = int(x / y)
+
+print(z)
