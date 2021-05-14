@@ -1,9 +1,9 @@
-import tkinter as tk
+import tkinter as tk #biblioteca pra criar interface
 
-base = tk.Tk()
+base = tk.Tk() #variável que contém a janela
 
 titulo = tk.Label(text = "Calculadora")
-titulo.grid(column=2, row=0)
+titulo.grid(column=2, row=0) #posicionamento do titulo
 
 soma_botao = tk.Button(text = "+", width=2)
 soma_botao.grid(column=3, row=1)
@@ -20,4 +20,4 @@ divisao_botao.grid(column=4, row=2)
 exponencial_botao = tk.Button(text= "x^y", width = 2)
 exponencial_botao.grid(column=3,row=3)
 
-base.mainloop()
+base.mainloop() #comando para a janela ficar aberta até ser fechada
