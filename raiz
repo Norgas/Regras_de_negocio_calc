@@ -1,6 +1,17 @@
-import math library
+def raiz_oper(x):
+    global resul
+    y = int(input())
+    resul = x ** (1/y)
+    oper = input("oper: ")
+    if oper == "raiz" :
+        raiz_oper(resul)
+    return(resul)
 
-z = float ( input ("Informe um numero para calcular a sua raiz: "))
-raiz= math.sqrt(numero)
+a = int(input())
 
-print("Resultado: %.2f"%raiz)
+oper = input("operaçao: ")
+
+if oper == "raiz":
+    raiz_oper(a)
+
+print(resul)
