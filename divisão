@@ -1,6 +1,0 @@
-x= int(input("Insira um número")
-y= int(input("Insira um número")
-
-z= x / y
-
-print(z)
