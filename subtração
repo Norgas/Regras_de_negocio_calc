@@ -1,8 +1,17 @@
 def subtracao(x):
+    global resul
     y = int(input())
     resul = x - y
-    print(resul)
+    oper = input("oper: ")
+    if oper == "-" :
+        subtracao(resul)
+    return(resul)
 
-n = int(input())
+a = int(input())
 
-subtracao(n)
+oper = input("operaçao: ")
+
+if oper == "-":
+    subtracao(a)
+
+print(resul)
