@@ -1,6 +1,15 @@
-x= int(input("Insira um número"))
-y= int(input("Insira outro número"))
+def exponenciacao(x):
+    global resul
+    y = int(input())
+    resul = x ** y
+    oper = input("oper: ")
+    return(resul)
 
-z= x ** y
+a = int(input())
 
-print(z)
+oper = input("operaçao: ")
+
+if oper == "^":
+    exponenciacao(a)
+
+print(resul)
