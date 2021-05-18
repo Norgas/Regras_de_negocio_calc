@@ -1,0 +1,18 @@
+import math
+def log(base):
+    y = int (input())
+    resul = log(x)/log(base)
+    print(resul)
+    
+
+n = int(input())
+
+log(base)
+
+
+
+import numpy
+
+x = numpy.log(10)
+
+print(x)
