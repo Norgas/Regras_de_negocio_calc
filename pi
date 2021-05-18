@@ -1,0 +1,9 @@
+import math
+def pi(x):
+    y = int (input())
+    resul = math.pi * y
+    print(resul)
+
+n = int(input())
+
+pi(n)
