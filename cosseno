@@ -1,0 +1,9 @@
+import math 
+
+#return the sine of different numbers
+
+print( math.cos(0.00))
+print(math.cos(-1.23))
+print(math.cos(10))
+print(math.cos(math.pi))
+print(math.cos(math.pi/2))
