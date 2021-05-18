@@ -1,8 +1,8 @@
-x = int(input())
-text_divisao= "{}/".format(x)
+def divisão (x):
+    y = int (input())
+    resul = x / y
+    print(resul)
 
-y = int(input(text_divisao))
+n = int(input())
 
-z = int(x / y)
-
-print(z)
+divisão(n)
