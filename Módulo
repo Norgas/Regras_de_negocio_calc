@@ -1,6 +1,8 @@
-x = int(input("Insira um número"))
-y = int(input("Insira outro número"))
+def modulo  (x):
+    y = int (input())
+    resul = x % y
+    print(resul)
 
-z= x % y
+n = int(input())
 
-print(z)
+modulo (n)
