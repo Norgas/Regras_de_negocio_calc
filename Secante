@@ -1,8 +1,0 @@
-import math
-
-def sec():
-    x = int(input("sec( )\b\b"))
-    resul = 1/math.cos(x)
-    print(resul)
-
-sec()
