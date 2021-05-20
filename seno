@@ -1,4 +1,8 @@
 import math 
-ângulo = float(input('Digite o angulo que você deseja:'))
-seno = math.sin(math.radians(ângulo))
-print('O ângulo de {} tem o SENO de {:.2f}'.format(ângulo,seno))
+def sen (x) :
+  seno = math.sin(math.radians(x))
+  print (seno)
+  
+x = int(input())
+
+sen (x)
