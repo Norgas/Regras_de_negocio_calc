@@ -1,4 +1,8 @@
 import math 
-ângulo = float(input('Digite o angulo que você deseja:'))
-cosseno = math.cos(math.radians(ângulo))
-print('O ângulo de {} tem o COSSENO de {:.2f}'.format(ângulo,cosseno))
+def cos (x) :
+  cosseno = math.sin(math.radians(x))
+  print (cosseno)
+  
+x = int(input())
+
+cos (x)
