@@ -1,9 +1,4 @@
-import math
-
-#return the sine of different numbers
-
-print( math.sin(0.00))
-print(math.sin(-1.23))
-print(math.sin(10))
-print(math.sin(math.pi))
-print(math.sin(math.pi/2))
+import math 
+ângulo = float(input('Digite o angulo que você deseja:'))
+seno = math.sin(math.radians(ângulo))
+print('O ângulo de {} tem o SENO de {:.2f}'.format(ângulo,seno))
