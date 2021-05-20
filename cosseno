@@ -7,3 +7,9 @@ print(math.cos(-1.23))
 print(math.cos(10))
 print(math.cos(math.pi))
 print(math.cos(math.pi/2))
+
+
+import math 
+ângulo = float(input('Digite o angulo que você deseja:'))
+cosseno = math.cos(math.radians(ângulo))
+print('O ângulo de {} tem o COSSENO de {:.2f}'.format(ângulo,cosseno))
