@@ -1,0 +1,8 @@
+def potenciação(x):
+    y = int (input())
+    resul = x ** y
+    print(resul)
+
+n = int(input())
+
+potenciação(n)
