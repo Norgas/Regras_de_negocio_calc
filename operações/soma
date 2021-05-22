@@ -1,6 +1,8 @@
-x = int(input("Insira um número:"))
-y = int(input("Insira outro número:"))
+def soma(x):
+    y = int (input())
+    resul = x + y
+    print(resul)
 
-z = y + x
+n = int(input())
 
-print(z)
+soma(n)
