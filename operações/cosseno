@@ -1,8 +1,7 @@
-import math 
-def cos (x) :
+ def cos (x) :
   cosseno = math.sin(math.radians(x))
   print (cosseno)
   
 x = int(input())
 
-cos (x)
+
