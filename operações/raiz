@@ -7,11 +7,3 @@ def raiz_oper(x):
         raiz_oper(resul)
     return(resul)
 
-a = int(input())
-
-oper = input("operaçao: ")
-
-if oper == "raiz":
-    raiz_oper(a)
-
-print(resul)
