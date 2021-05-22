@@ -1,0 +1,8 @@
+import math 
+def cos_radiano (x) :
+  cosseno = math.cos(x)
+  print (cosseno)
+  
+x = int(input())
+
+cos_radiano(x)
