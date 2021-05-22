@@ -1,5 +1,5 @@
-x = int(input("Insira um número"))
-y = int(input("Insira outro número"))
+x = int(input("Insira um número:"))
+y = int(input("Insira outro número:"))
 
 z = y + x
 
