@@ -7,11 +7,3 @@ def subtracao(x):
         subtracao(resul)
     return(resul)
 
-a = int(input())
-
-oper = input("operaçao: ")
-
-if oper == "-":
-    subtracao(a)
-
-print(resul)
