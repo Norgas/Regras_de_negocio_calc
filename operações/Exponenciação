@@ -5,11 +5,4 @@ def exponenciacao(x):
     oper = input("oper: ")
     return(resul)
 
-a = int(input())
 
-oper = input("operaçao: ")
-
-if oper == "^":
-    exponenciacao(a)
-
-print(resul)
