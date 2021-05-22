@@ -3,6 +3,4 @@ def tan (x) :
   tangente = math.tan(math.radians(x))
   print (tangente)
   
-x = int(input())
 
-tan (x)
