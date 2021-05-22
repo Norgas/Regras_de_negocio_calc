@@ -1,0 +1,8 @@
+import math 
+def tan_radiano (x) :
+  tangente = math.tan(x)
+  print (tangente)
+  
+x = int(input())
+
+tan_radiano(x)
