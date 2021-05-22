@@ -3,6 +3,4 @@ def divisão (x):
     resul = x / y
     print(resul)
 
-n = int(input())
 
-divisão(n)
