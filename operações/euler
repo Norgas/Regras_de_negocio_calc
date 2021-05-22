@@ -1,5 +1,3 @@
-import math
-
 def euler():
     global x
     x = math.e
