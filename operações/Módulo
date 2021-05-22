@@ -3,6 +3,4 @@ def modulo  (x):
     resul = x % y
     print(resul)
 
-n = int(input())
 
-modulo (n)
