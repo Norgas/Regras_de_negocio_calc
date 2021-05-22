@@ -3,6 +3,3 @@ def sen_radiano (x) :
   seno = math.sin(x)
   print (seno)
   
-x = int(input())
-
-sen_radiano(x)
