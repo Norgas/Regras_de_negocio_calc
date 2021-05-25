@@ -5,4 +5,4 @@ cos_botao = tk.Button(text = "cos", width = 2)
 cos_botao.grid(column= 0, row= 2)
 
 ln_botao = tk.Button(text = "ln", width = 2)
-ln_botao.grid(column= 3, row= 2)
+ln_botao.grid(column= 2, row= 2)
