@@ -5,5 +5,5 @@ def subtracao(x):
     oper = input("oper: ")
     if oper == "-" :
         subtracao(resul)
-    return(resul)
+    
 
