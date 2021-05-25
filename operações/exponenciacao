@@ -3,6 +3,6 @@ def exponenciacao(x):
     y = int(input())
     resul = x ** y
     oper = input("oper: ")
-    return(resul)
+  
 
 
