@@ -15,3 +15,9 @@ e_botao.grid(column= 2, row= 3)
 
 pi_botao = tk.Button(text = "π", width = 2)
 pi_botao.grid(column= 3, row= 3)
+
+sin_botao = tk.Button(text = "sin", width = 2)
+sin_botao.grid(column= 0, row= 1)
+
+log_botao = tk.Button(text = "log", width = 2)
+log_botao.grid(column= 2, row= 1)
