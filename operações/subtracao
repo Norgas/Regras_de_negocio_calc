@@ -4,6 +4,6 @@ def subtracao(x):
     resul = x - y
     oper = input("oper: ")
     if oper == "-" :
-        subtracao(resul)
+       
     
 
