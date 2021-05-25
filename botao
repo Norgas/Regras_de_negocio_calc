@@ -23,7 +23,7 @@ log_botao = tk.Button(text = "log", width = 2)
 log_botao.grid(column= 2, row= 1)
 
 botao0 = tk.Button(text="0", width=2)
-botao9.grid(column=4 ,row=3 )
+botao0.grid(column=4 ,row=3 )
 
 igual_botao = tk.Button(text="=", width=2)
 igual_botao.grid(column=6 ,row=3 )
