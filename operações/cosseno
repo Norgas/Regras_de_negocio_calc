@@ -2,6 +2,6 @@
   cosseno = math.sin(math.radians(x))
   print (cosseno)
   
-x = int(input())
+
 
 
