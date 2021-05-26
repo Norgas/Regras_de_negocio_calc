@@ -1,6 +1,5 @@
 def divisão (x):
-    y = int (input())
-    resul = x / y
+resul = x / y
    
 
 
