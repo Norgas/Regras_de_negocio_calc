@@ -1,4 +1,4 @@
 def cossec():
-resul = 1/math.sin(x)
+    resul = 1/math.sin(x)
 
 
