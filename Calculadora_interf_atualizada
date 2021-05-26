@@ -7,7 +7,7 @@ class Calculadora():
         self.base = tk.Tk()
         self.base.geometry("250x250")
         self.expressao = ''
-        self.operacao = ''
+        self.primeira_instancia = True
         self.run()
 
     def igual(self):
@@ -18,20 +18,23 @@ class Calculadora():
         self.expressao = self.expressao + str(x)
         self.visor_numero = tk.Label(self.frame_visor, text = self.expressao)
         self.visor_numero.grid(column=5,row=0, columnspan=4)
+        if self.primeira_instancia:
+            self.primeira_frase = self.expressao
+            print(self.primeira_frase + "PRIMEIRA")
+        else:
+            self.segunda_frase = self.expressao
+            print(self.segunda_frase + "SEGUNDA")
 
-    #def primeira_frase(self):
-    #    pass
-
-    #def segunda_frase(self):
-    #    pass
-
-    def soma(self):
-        self.primeira_frase = self.expressao
-        self.segunda_frase = ''
+    def operacao(self, algarismo):
+        self.primeira_instancia = False
         self.expressao = ''
         self.frame_visor.destroy()
         self.frame_visor = tk.Frame()
         self.frame_visor.grid(column=5 , row=0, columnspan=4)
+        if algarismo == '+':
+            self.algarismo = '+'
+        if algarismo == '-':
+            self.algarismo = '-'
 
     def visores(self):
         self.frame_visor = tk.Frame()
@@ -72,22 +75,22 @@ class Calculadora():
         botao3 = tk.Button(text="3", width=2,command = lambda :self.digito(3))
         botao3.grid(column=6 ,row=3)
 
-        soma_botao = tk.Button(text = "+", width=2, command=self.soma)
+        soma_botao = tk.Button(text = "+", width=2, command=lambda :self.operacao('+'))
         soma_botao.grid(column=7 ,row=3 )
 
-        subtracao_botao = tk.Button(text = "-", width=2)
+        subtracao_botao = tk.Button(text = "-", width=2, command=lambda :self.operacao('-'))
         subtracao_botao.grid(column=8 ,row=3 )
 
-        multiplicacao_botao = tk.Button(text = "*", width=2)
+        multiplicacao_botao = tk.Button(text = "*", width=2 , command=lambda :self.operacao('*'))
         multiplicacao_botao.grid(column=7 ,row=4 )
 
-        divisao_botao = tk.Button(text = "/", width=2)
+        divisao_botao = tk.Button(text = "/", width=2, command=lambda :self.operacao('/'))
         divisao_botao.grid(column=8 ,row=4 )
 
-        exponencial_botao = tk.Button(text= "x^y", width = 2)
+        exponencial_botao = tk.Button(text= "x^y", width = 2, command=lambda :self.operacao('^'))
         exponencial_botao.grid(column= 3,row=1 )
 
-        raiz_botao = tk.Button(text = "y√x", width=2)
+        raiz_botao = tk.Button(text = "y√x", width=2, command=lambda :self.operacao('√'))
         raiz_botao.grid(column=3 ,row=2 )
 
         ac_botao = tk.Button(text = "AC", width = 2,height = 3)
@@ -102,16 +105,16 @@ class Calculadora():
         ang_botao = tk.Button(text = "ang", width = 2)
         ang_botao.grid(column= 2, row= 0)
 
-        fat_botao = tk.Button(text = "x!", width = 2)
+        fat_botao = tk.Button(text = "x!", width = 2,command=lambda :self.operacao('!'))
         fat_botao.grid(column= 3, row= 0)
 
-        cos_botao = tk.Button(text = "cos", width = 2)
+        cos_botao = tk.Button(text = "cos", width = 2,command=lambda :self.operacao('cos'))
         cos_botao.grid(column= 0, row= 2)
 
-        ln_botao = tk.Button(text = "ln", width = 2)
+        ln_botao = tk.Button(text = "ln", width = 2,command=lambda :self.operacao('ln'))
         ln_botao.grid(column= 2, row= 2)
 
-        tg_botao = tk.Button(text = "tg", width = 2)
+        tg_botao = tk.Button(text = "tg", width = 2,command=lambda :self.operacao('tg'))
         tg_botao.grid(column= 0, row= 3)
 
         e_botao = tk.Button(text = "e", width = 2,command = lambda :self.digito(math.e))
@@ -120,10 +123,10 @@ class Calculadora():
         pi_botao = tk.Button(text = "π", width = 2,command = lambda :self.digito(math.pi))
         pi_botao.grid(column= 3, row= 3)
 
-        sin_botao = tk.Button(text = "sin", width = 2)
+        sin_botao = tk.Button(text = "sin", width = 2,command=lambda :self.operacao('sin'))
         sin_botao.grid(column= 0, row= 1)
 
-        log_botao = tk.Button(text = "log", width = 2)
+        log_botao = tk.Button(text = "log", width = 2,command=lambda :self.operacao('log'))
         log_botao.grid(column= 2, row= 1)
 
         botao0 = tk.Button(text="0", width=2, command = lambda :self.digito(0))
