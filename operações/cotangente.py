@@ -1,5 +1,4 @@
 def cotg():
-    x = int(input("cotg(  )\b\b\b"))
-    resul = 1/math.tan(x)
+resul = 1/math.tan(x)
     
 
