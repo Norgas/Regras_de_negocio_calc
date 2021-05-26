@@ -1,0 +1,145 @@
+import tkinter as tk
+import math
+from operaçoes import *
+
+class Calculadora():
+    def __init__(self):
+        self.base = tk.Tk()
+        self.base.geometry("250x250")
+        self.expressao = ''
+        self.operacao = ''
+        self.run()
+
+    def igual(self):
+        self.segunda_frase = self.expressao
+
+
+    def digito(self, x):
+        self.expressao = self.expressao + str(x)
+        self.visor_numero = tk.Label(self.frame_visor, text = self.expressao)
+        self.visor_numero.grid(column=5,row=0, columnspan=4)
+
+    #def primeira_frase(self):
+    #    pass
+
+    #def segunda_frase(self):
+    #    pass
+
+    def soma(self):
+        self.primeira_frase = self.expressao
+        self.segunda_frase = ''
+        self.expressao = ''
+        self.frame_visor.destroy()
+        self.frame_visor = tk.Frame()
+        self.frame_visor.grid(column=5 , row=0, columnspan=4)
+
+    def visores(self):
+        self.frame_visor = tk.Frame()
+        self.frame_visor.grid(column=5 , row=0, columnspan=4)
+    
+        self.visor_numero = tk.Label(self.frame_visor, text = '')
+        self.visor_numero.grid(column=5,row=0, columnspan=4)
+
+        self.visor_operacao = tk.Label(self.base, text = '')
+        self.visor_operacao.grid(column = 4, row = 0)
+
+    def botoes(self):
+
+        botao7 = tk.Button(text="7", width=2, command = lambda :self.digito(7))
+        botao7.grid(column=4,row=1)
+
+        botao8 = tk.Button(text="8", width=2,command = lambda :self.digito(8))
+        botao8.grid(column=5,row=1 )
+
+        botao9 = tk.Button(text="9", width=2,command = lambda :self.digito(9))
+        botao9.grid(column=6 ,row=1 )
+
+        botao4 = tk.Button(text="4", width=2,command = lambda :self.digito(4))
+        botao4.grid(column=4 ,row=2 )
+
+        botao5 = tk.Button(text="5", width=2,command = lambda :self.digito(5))
+        botao5.grid(column=5 ,row=2 )
+
+        botao6 = tk.Button(text="6", width=2,command = lambda :self.digito(6))
+        botao6.grid(column=6 ,row=2 )
+
+        botao1 = tk.Button(text="1", width=2,command = lambda :self.digito(1))
+        botao1.grid(column=4 ,row=3)
+
+        botao2 = tk.Button(text="2", width=2,command = lambda :self.digito(2))
+        botao2.grid(column=5 ,row=3 )
+
+        botao3 = tk.Button(text="3", width=2,command = lambda :self.digito(3))
+        botao3.grid(column=6 ,row=3)
+
+        soma_botao = tk.Button(text = "+", width=2, command=self.soma)
+        soma_botao.grid(column=7 ,row=3 )
+
+        subtracao_botao = tk.Button(text = "-", width=2)
+        subtracao_botao.grid(column=8 ,row=3 )
+
+        multiplicacao_botao = tk.Button(text = "*", width=2)
+        multiplicacao_botao.grid(column=7 ,row=4 )
+
+        divisao_botao = tk.Button(text = "/", width=2)
+        divisao_botao.grid(column=8 ,row=4 )
+
+        exponencial_botao = tk.Button(text= "x^y", width = 2)
+        exponencial_botao.grid(column= 3,row=1 )
+
+        raiz_botao = tk.Button(text = "y√x", width=2)
+        raiz_botao.grid(column=3 ,row=2 )
+
+        ac_botao = tk.Button(text = "AC", width = 2,height = 3)
+        ac_botao.grid(column=7,row=1, rowspan=2)
+
+        del_botao = tk.Button(text = "DEL", width=2, height=3)
+        del_botao.grid(column= 8, row = 1, rowspan=2)
+
+        rad_botao = tk.Button(text = "rad", width=2)
+        rad_botao.grid(column=0,row=0)
+
+        ang_botao = tk.Button(text = "ang", width = 2)
+        ang_botao.grid(column= 2, row= 0)
+
+        fat_botao = tk.Button(text = "x!", width = 2)
+        fat_botao.grid(column= 3, row= 0)
+
+        cos_botao = tk.Button(text = "cos", width = 2)
+        cos_botao.grid(column= 0, row= 2)
+
+        ln_botao = tk.Button(text = "ln", width = 2)
+        ln_botao.grid(column= 2, row= 2)
+
+        tg_botao = tk.Button(text = "tg", width = 2)
+        tg_botao.grid(column= 0, row= 3)
+
+        e_botao = tk.Button(text = "e", width = 2,command = lambda :self.digito(math.e))
+        e_botao.grid(column= 2, row= 3)
+
+        pi_botao = tk.Button(text = "π", width = 2,command = lambda :self.digito(math.pi))
+        pi_botao.grid(column= 3, row= 3)
+
+        sin_botao = tk.Button(text = "sin", width = 2)
+        sin_botao.grid(column= 0, row= 1)
+
+        log_botao = tk.Button(text = "log", width = 2)
+        log_botao.grid(column= 2, row= 1)
+
+        botao0 = tk.Button(text="0", width=2, command = lambda :self.digito(0))
+        botao0.grid(column=5 ,row=4 )
+
+        igual_botao = tk.Button(text="=", width=2, command = self.igual)
+        igual_botao.grid(column=6 ,row=4 )
+
+        ponto_botao = tk.Button(text = ".", width=2,command = lambda :self.digito('.'))
+        ponto_botao.grid(column=4,row=4)
+
+    def run(self):
+        self.running = True
+        while self.running:
+            self.visores()
+            self.botoes()
+            self.base.mainloop()
+
+calc = Calculadora()
