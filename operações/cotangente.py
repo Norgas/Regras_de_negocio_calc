@@ -1,4 +1,4 @@
 def cotg():
-resul = 1/math.tan(x)
+    resul = 1/math.tan(x)
     
 
