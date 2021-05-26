@@ -1,5 +1,5 @@
 def divisão (x):
-resul = x / y
+    resul = x / y
    
 
 
