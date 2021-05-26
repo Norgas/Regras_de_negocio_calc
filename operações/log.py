@@ -1,5 +1,4 @@
 def log():
-    x = int(input())
     resul = math.log(x, 10)
    
 
