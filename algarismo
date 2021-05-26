@@ -1,0 +1,9 @@
+if algarismo == '+':
+    self.algarismo = '+'
+if algarismo == '-':
+    self.algarismo = '-'
+if algarismo == '*':
+    self.algarismo = '*'
+if algarismo == '/':
+    self.algarismo = '/'
+            
