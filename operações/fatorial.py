@@ -8,4 +8,3 @@ def fatorial(x):
         result = result * x
         return ( result)
    
-
