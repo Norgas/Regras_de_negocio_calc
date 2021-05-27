@@ -19,7 +19,7 @@ class Calculadora():
             self.segunda_frase = float(self.segunda_frase)
         except:
             pass
-        self.visor_operacao = tk.Label(self.base, text = '    ')
+        self.visor_operacao = tk.Label(self.base, text = '          ')
         self.visor_operacao.grid(column = 4, row = 0)
 
         if self.algarismo == '+':
@@ -80,15 +80,15 @@ class Calculadora():
             self.visor_numero = tk.Label(self.frame_visor, text = self.resul)
             self.visor_numero.grid(column=5,row=0, columnspan=4)
         if self.algarismo == 'sec':
-            self.resul = secante(self.primeira_frase)
+            self.resul = sec(self.primeira_frase)
             self.visor_numero = tk.Label(self.frame_visor, text = self.resul)
             self.visor_numero.grid(column=5,row=0, columnspan=4)
         if self.algarismo == 'cossec':
-            self.resul = cossecante(self.primeira_frase)
+            self.resul = cossec(self.primeira_frase)
             self.visor_numero = tk.Label(self.frame_visor, text = self.resul)
             self.visor_numero.grid(column=5,row=0, columnspan=4)
-        if self.algarismo == 'cotang':
-            self.resul = cotangente(self.primeira_frase)
+        if self.algarismo == 'cotg':
+            self.resul = cotg(self.primeira_frase)
             self.visor_numero = tk.Label(self.frame_visor, text = self.resul)
             self.visor_numero.grid(column=5,row=0, columnspan=4)
         
@@ -154,11 +154,11 @@ class Calculadora():
         if algarismo == 'log':
             self.algarismo = 'log'
         if algarismo == 'sec':
-            self.algarismo == 'secante'
+            self.algarismo = 'sec'
         if algarismo == 'cossec':
-            self.algarismo == 'cossecante'
-        if algarismo == 'cotang':
-            self.algarismo == 'cotangente'
+            self.algarismo = 'cossec'
+        if algarismo == 'cotg':
+            self.algarismo = 'cotg'
 
     def clear(self):
         self.frame_visor.destroy()
@@ -218,10 +218,10 @@ class Calculadora():
         soma_botao.grid(column=7 ,row=3 )
 
         subtracao_botao = tk.Button(text = "-", width=4, height=2, command=lambda :self.operacao('-'))
-        subtracao_botao.grid(column=8 ,row=3 )
+        subtracao_botao.grid(column=8 ,row=2 )
 
         multiplicacao_botao = tk.Button(text = "*", width=4, height=2 , command=lambda :self.operacao('*'))
-        multiplicacao_botao.grid(column=7 ,row=4 )
+        multiplicacao_botao.grid(column=8 ,row=3 )
 
         divisao_botao = tk.Button(text = "/", width=4, height=2, command=lambda :self.operacao('/'))
         divisao_botao.grid(column=8 ,row=4 )
@@ -235,8 +235,8 @@ class Calculadora():
         ac_botao = tk.Button(text = "AC", width = 4,height = 5, command = self.clear)
         ac_botao.grid(column=7,row=1, rowspan=2)
 
-        del_botao = tk.Button(text = "DEL", width = 4,height = 5, command = self.delete)
-        del_botao.grid(column= 8, row = 1, rowspan=2)
+        del_botao = tk.Button(text = "DEL", width = 4,height = 2, command = self.delete)
+        del_botao.grid(column= 8, row = 1)
 
         rad_botao = tk.Button(text = "rad", width=4, height=2, command= lambda : self.angulo_rad('rad'))
         rad_botao.grid(column=0,row=0)
@@ -264,21 +264,30 @@ class Calculadora():
 
         sin_botao = tk.Button(text = "sin", width=4, height=2,command=lambda :self.operacao('sin'))
         sin_botao.grid(column= 0, row= 1)
+        
+        sec_botao = tk.Button(text= "sec", width=4, height=2,command=lambda :self.operacao('sec'))
+        sec_botao.grid(column=3, row=4)
+
+        cossec_botao = tk.Button(text= "cossec", width=4, height=2,command=lambda :self.operacao('cossec'))
+        cossec_botao.grid(column=2, row=4)
+
+        cotg_botao = tk.Button(text= "cotg", width=4, height=2,command=lambda :self.operacao('cotg'))
+        cotg_botao.grid(column=0, row=4)
 
         log_botao = tk.Button(text = "log", width=4, height=2,command=lambda :self.operacao('log'))
         log_botao.grid(column= 2, row= 1)
 
         botao0 = tk.Button(text="0", width=4, height=2, command = lambda :self.digito(0))
-        botao0.grid(column=5 ,row=4 )
+        botao0.grid(column=6 ,row=4 )
 
         igual_botao = tk.Button(text="=", width=4, height=2, command = self.igual)
-        igual_botao.grid(column=6 ,row=4 )
+        igual_botao.grid(column=7 ,row=4 )
 
         ponto_botao = tk.Button(text = ".", width=4, height=2,command = lambda :self.digito('.'))
-        ponto_botao.grid(column=4,row=4)
+        ponto_botao.grid(column=5,row=4)
 
         negativo_botao = tk.Button(text = "(-)", width=4, height=2,command = self.negativo)
-        negativo_botao.grid(column=3,row=4)
+        negativo_botao.grid(column=4,row=4)
 
     def run(self):
         self.running = True
@@ -288,3 +297,4 @@ class Calculadora():
             self.base.mainloop()
 
 calc = Calculadora()
+
