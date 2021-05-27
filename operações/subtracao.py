@@ -3,6 +3,7 @@ def subtracao(x):
     resul = x - y
     oper = input("oper: ")
     if oper == "-" :
+    return (resul)    
        
     
 
