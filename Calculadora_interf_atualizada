@@ -182,7 +182,7 @@ class Calculadora():
         self.visor_numero = tk.Label(self.frame_visor, text = '')
         self.visor_numero.grid(column=5,row=0, columnspan=4)
 
-        self.visor_operacao = tk.Label(self.base, text = '')
+        self.visor_operacao = tk.Label(self.base, text = '          ')
         self.visor_operacao.grid(column = 4, row = 0)
 
     def botoes(self):
