@@ -1,5 +1,5 @@
  def cos_radiano (x) :
-     cosseno = math.cos(x)
-  
+     resul = math.cos(x)
+     return (resul)
   
 
