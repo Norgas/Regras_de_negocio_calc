@@ -1,3 +1,3 @@
-def pi():
-    global x
+def pi(x):
     x = math.pi
+    return ( resul )
