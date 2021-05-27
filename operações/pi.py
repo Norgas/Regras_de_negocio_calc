@@ -1,3 +1,3 @@
 def pi(x):
-    resul = math.pi
+    x = math.pi
     return ( resul )
