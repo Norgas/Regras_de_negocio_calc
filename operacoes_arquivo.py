@@ -1,5 +1,7 @@
-import sys
-sys.path.insert(0, 'C:\\Users\\Zeni\\Documents\\Computer_Society\\Python\\RDNCalc\\operacoes')
+import sys, os
+path1 = os.path.dirname(__file__) 
+path2 = os.path.join(path1, 'operacoes')
+sys.path.insert(0, path2)
 
 import operacoes
 
