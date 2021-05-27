@@ -1,5 +1,5 @@
  def cos (x) :
-     cosseno = math.sin(math.radians(x))
+     resul = math.sin(math.radians(x))
      return ( resul )
  
   
