@@ -6,4 +6,34 @@ if algarismo == '*':
     self.algarismo = '*'
 if algarismo == '/':
     self.algarismo = '/'
+if algarismo == '^':
+    self.algarismo = '^'
+if algarismo == '√':
+    self.algarismo = '√'
+if algarismo == '!':
+    self.algarismo = '!' 
+if algarismo == 'cos':
+    self.algarismo = 'cos' 
+if algarismo == 'ln':
+    self.algarismo = 'ln' 
+if algarismo == 'tg':
+    self.algarismo = 'tg' 
+if algarismo == 'math.e':
+    self.algarismo = 'math.e'
+if algarismo == 'math.pi':
+    self.algarismo = 'math.pi' 
+if algarismo == 'sin':
+    self.algarismo = 'sin'
+if algarismo == 'log':
+    self.algarismo = 'log'
+   
+        
+        
+        
+    
+        
+    
+    
+    
+    
             
