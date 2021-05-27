@@ -1,4 +1,4 @@
-def subtracao(x):
+def subtracao(x , y):
     global resul
     resul = x - y
     oper = input("oper: ")
