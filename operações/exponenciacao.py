@@ -1,7 +1,7 @@
-def exponenciacao(x):
-    global resul
+def exponenciacao(x , y):
     resul = x ** y
-    oper = input("oper: ")
+    return ( resul )
+    
   
 
 
