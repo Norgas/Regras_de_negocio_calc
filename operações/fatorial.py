@@ -6,5 +6,6 @@ def fatorial(x):
     result = 1
     for x in fatlist:
         result = result * x
+        return ( result)
    
 
